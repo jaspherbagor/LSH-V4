@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-success">
+            <div class="card-icon bg-website">
                 <i class="fa fa-cart-plus"></i>
             </div>
             <div class="card-wrap">
@@ -21,7 +21,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-danger">
+            <div class="card-icon bg-website">
                 <i class="fa fa-shopping-cart"></i>
             </div>
             <div class="card-wrap">
@@ -36,7 +36,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-success">
+            <div class="card-icon bg-website">
                 <i class="fa fa-user-plus"></i>
             </div>
             <div class="card-wrap">
@@ -51,7 +51,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-info">
+            <div class="card-icon bg-website">
                 <i class="fa fa-user"></i>
             </div>
             <div class="card-wrap">
@@ -66,7 +66,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-primary">
+            <div class="card-icon bg-website">
                 <i class="fa fa-home"></i>
             </div>
             <div class="card-wrap">
@@ -81,7 +81,7 @@
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-danger">
+            <div class="card-icon bg-website">
                 <i class="fa fa-users"></i>
             </div>
             <div class="card-wrap">
@@ -129,8 +129,8 @@
                                             <td>{{ \Carbon\Carbon::createFromFormat('d/m/Y', $row->booking_date)->format('F d, Y') }}</td>
                                             <td>₱{{ number_format($row->paid_amount, 2) }}</td>
                                             <td class="pt_10 pb_10">
-                                                <a href="{{ route('admin_invoice',$row->id) }}" class="btn btn-primary">Detail</a>
-                                                <a href="{{ route('admin_order_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');">Delete</a>
+                                                <a href="{{ route('admin_invoice',$row->id) }}" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="View"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                <a href="{{ route('admin_order_delete',$row->id) }}" class="btn btn-danger" onClick="return confirm('Are you sure?');" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                             </td>
                                         </tr>
                                         @endforeach
