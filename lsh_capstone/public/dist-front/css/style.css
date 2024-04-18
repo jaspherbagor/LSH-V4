@@ -697,8 +697,8 @@ select {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: #7f8180;
-	color: #fff;
+	background: #ced4da;
+	color: #212529;
 	opacity: 0.5;
 	z-index: 99;
 }
@@ -718,10 +718,6 @@ select {
 		margin-top: 60px;
 	}
 }
-
-
-
-
 /* Page Content */
 .page-content {
 	padding-top: 40px;
@@ -733,6 +729,7 @@ select {
 .page-content .featured-photo img {
 	width: 100%;
 	height: auto;
+	border-radius: 0 15px 0 15px;
 }
 .page-content .sub {
 	overflow: hidden;
