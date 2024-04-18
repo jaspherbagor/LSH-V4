@@ -37,7 +37,7 @@ class BookingController extends Controller
         $t1 = strtotime($d1_new);
         $t2 = strtotime($d2_new);
 
-        $cnt = 1;
+        $count = 1;
         while(1) {
             if($t1>=$t2) {
                 break;
@@ -49,13 +49,13 @@ class BookingController extends Controller
             $total_allowed_rooms = $arr->total_rooms;
 
             if($total_already_booked_rooms == $total_allowed_rooms) {
-                $cnt = 0;
+                $count = 0;
                 break;
             }
             $t1 = strtotime('+1 day',$t1);
         }
 
-        if($cnt == 0) {
+        if($count == 0) {
             return redirect()->back()->with('error', 'Maximum number of this room is already booked');
         }        
         
@@ -140,11 +140,11 @@ class BookingController extends Controller
     public function checkout()
     {
         if(!Auth::guard('customer')->check()) {
-            return redirect()->back()->with('error', 'You must have to login in order to checkout');
+            return redirect()->back()->with('error', 'You must have to login in order to book');
         }
 
         if(!session()->has('cart_room_id')) {
-            return redirect()->back()->with('error', 'There is no item in the cart');
+            return redirect()->back()->with('error', 'No accommodation units added to booking cart');
         }
 
         return view('front.checkout');
@@ -302,7 +302,7 @@ class BookingController extends Controller
         $message = '<p>Dear <strong>'.Auth::guard('customer')->user()->name. '</strong>,</p>';
         $message .= '<p>Thank you for choosing <strong>Labason Safe Haven</strong> for your upcoming stay. We appreciate your trust in us and are excited to welcome you to our establishment. The booking information is given below: </p>';
 
-        $message .= '<strong>Order No</strong>: '.$order_no;
+        $message .= '<strong>Booking No</strong>: '.$order_no;
         $message .= '<br><strong>Transaction Id</strong>: '.$transaction_id;
         $message .= '<br><strong>Payment Method</strong>: Stripe';
         $message .= '<br><strong>Paid Amount</strong>: ₱'.number_format($final_price, 2);
