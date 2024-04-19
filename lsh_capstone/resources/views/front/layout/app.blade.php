@@ -37,8 +37,6 @@
             .slide-carousel.owl-carousel .owl-nav .owl-next:hover,
             .home-feature .inner .icon i,
             .home-rooms .inner .text .price,
-            .home-rooms .inner .text .button a,
-            .blog-item .inner .text .button a,
             .room-detail-carousel.owl-carousel .owl-nav .owl-prev:hover, 
             .room-detail-carousel.owl-carousel .owl-nav .owl-next:hover {
                 color: {{ $global_setting_data->theme_color_1 }};
@@ -75,12 +73,23 @@
             }
 
             .home-feature .inner .icon i,
-            .home-rooms .inner .text .button a,
-            .blog-item .inner .text .button a,
             .room-detail .amenity .item,
             .cart .table-cart tr th {
                 background-color: {{ $global_setting_data->theme_color_2 }}!important;
             }
+
+            .home-rooms .inner .text .button a, .blog-item .inner .text .button a {
+                background: {{ $global_setting_data->theme_color_1 }};
+            }
+
+            .home-rooms .inner .text .button a, .blog-item .inner .text .button a {
+                color: white;
+            }
+
+            .home-rooms .inner .text .button a:hover, .blog-item .inner .text .button a:hover {
+                background: #e1ab65;
+            }
+
         </style>
 
     </head>
