@@ -500,6 +500,7 @@ select {
 .home-rooms .inner .photo img {
 	width: 100%;
 	height: 170px;
+	border-radius: 5px 5px 0 0;
 	object-fit: cover;
 }
 .home-rooms .inner .text h2 {
@@ -532,10 +533,6 @@ select {
 	border: 0;
 	font-weight: 700;
 }
-
-
-
-
 /* Home Page - Blog */
 .blog-item {
 	margin-top: 40px;
