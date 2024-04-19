@@ -124,7 +124,19 @@
 
                             @else   
 
-                                <li class="menu"><a href="{{ route('customer_home') }}">Dashboard</a></li>
+                                <li class="menu">
+                                    <a href="{{ route('customer_home') }}">
+                                        @if(Auth::guard('customer')->user()->photo == '')
+                                        
+                                        <img alt="image" src="{{ asset('uploads/default.png') }}" class="rounded-circle mr-1 navbar-profile">
+                                        @else
+                                        
+                                        <img alt="image" src="{{ asset('uploads/'.Auth::guard('customer')->user()->photo) }}" class="rounded-circle mr-1 navbar-profile">
+                                        @endif
+                                    </a>
+                                </li>
+
+                                
 
                             @endif
                         </ul>
