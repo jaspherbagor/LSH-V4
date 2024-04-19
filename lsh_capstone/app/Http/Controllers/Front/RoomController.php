@@ -16,8 +16,9 @@ class RoomController extends Controller
         $accommodation = Accommodation::where('id', $accomm_id)->first();
         $accommodation_type = AccommodationType::where('id', $accommodation->accommodation_type_id)->first();
         $room_all = Room::where('accommodation_id', $accomm_id)->paginate(12);
+        $room_count = Room::where('accommodation_id', $accomm_id)->count();
         $rates = AccommodationRate::where('accommodation_id', $accomm_id)->get();
-        return view('front.room', compact('room_all', 'accommodation', 'accommodation_type', 'rates'));
+        return view('front.room', compact('room_all', 'accommodation', 'accommodation_type', 'rates', 'room_count'));
     }
 
     public function single_room($id)
