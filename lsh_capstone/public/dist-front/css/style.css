@@ -500,6 +500,7 @@ select {
 .home-rooms .inner .photo img {
 	width: 100%;
 	height: 170px;
+	border-radius: 5px 5px 0 0;
 	object-fit: cover;
 }
 .home-rooms .inner .text h2 {
@@ -532,10 +533,6 @@ select {
 	border: 0;
 	font-weight: 700;
 }
-
-
-
-
 /* Home Page - Blog */
 .blog-item {
 	margin-top: 40px;
@@ -556,6 +553,7 @@ select {
 	width: 100%;
 	height: 220px;
 	object-fit: cover;
+	border-radius: 7px 7px 0 0;
 }
 .blog-item .inner .text h2 {
 	font-size: 18px;
@@ -970,12 +968,14 @@ select {
 .testimonial .photo img {
 	width: 100%;
 	height: auto;
+	border-radius: 100px;
+	
 }
 .testimonial .text {
 	margin-top: 15px;
 }
 .testimonial .text h4 {
-	font-size: 22px;
+	font-size: 30px;
     font-weight: 700;
 	color: #fff;
 	margin-bottom: 8px;
@@ -983,6 +983,7 @@ select {
 .testimonial .text p {
 	font-size: 15px;
 	margin: 0;
+	color: #deb887;
 }
 .testimonial-carousel .owl-dots {
 	text-align: center;
@@ -1012,7 +1013,7 @@ select {
 	width: 40px;
 	height: 50px;
 	line-height: 48px;
-	background: #fff;
+	background: transparent;
 	color: #Deb887;
 	margin-top: -25px;
 	transition: all 0.3s;
