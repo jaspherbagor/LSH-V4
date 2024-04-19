@@ -125,7 +125,7 @@
                             @else   
 
                                 <li class="menu">
-                                    <a href="{{ route('customer_home') }}">
+                                    <a href="{{ route('customer_home') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ Auth::guard('customer')->user()->name }} - Dashboard">
                                         @if(Auth::guard('customer')->user()->photo == '')
                                         
                                         <img alt="image" src="{{ asset('uploads/default.png') }}" class="rounded-circle mr-1 navbar-profile">
