@@ -124,7 +124,19 @@
 
                             @else   
 
-                                <li class="menu"><a href="{{ route('customer_home') }}">Dashboard</a></li>
+                                <li class="menu">
+                                    <a href="{{ route('customer_home') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{ Auth::guard('customer')->user()->name }} - Dashboard">
+                                        @if(Auth::guard('customer')->user()->photo == '')
+                                        
+                                        <img alt="image" src="{{ asset('uploads/default.png') }}" class="rounded-circle mr-1 navbar-profile">
+                                        @else
+                                        
+                                        <img alt="image" src="{{ asset('uploads/'.Auth::guard('customer')->user()->photo) }}" class="rounded-circle mr-1 navbar-profile">
+                                        @endif
+                                    </a>
+                                </li>
+
+                                
 
                             @endif
                         </ul>
@@ -218,7 +230,7 @@
                         <div class="item">
                             <h2 class="heading">Site Links</h2>
                             <ul class="useful-links">
-                                <li><a href="rooms.html">Accommodations</a></li>
+                                <li><a href="{{ route('accommodation_types') }}">Accommodation Types</a></li>
                                 @if($global_page_data->photo_gallery_status === 1)
                                 <li><a href="{{ route('photo_gallery') }}">Photo Gallery</a></li>
                                 @endif

@@ -8,7 +8,7 @@
         <a href="{{ route('customer_order_view') }}">
             <div class="card card-statistic-1">
                 <div class="card-icon bg-website">
-                    <i class="fa fa-list-alt"></i>
+                    <i class="fa fa-check-circle"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
@@ -24,7 +24,7 @@
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
             <div class="card-icon bg-website">
-                <i class="fa fa-list-alt"></i>
+                <i class="fa fa-clock-o"></i>
             </div>
             <div class="card-wrap">
                 <div class="card-header">
