@@ -553,6 +553,7 @@ select {
 	width: 100%;
 	height: 220px;
 	object-fit: cover;
+	border-radius: 7px 7px 0 0;
 }
 .blog-item .inner .text h2 {
 	font-size: 18px;
