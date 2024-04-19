@@ -90,59 +90,60 @@
                         <div class="card-body">
                             
                             <h5 class="card-title mb-3 fw-bold">{{ $item->review_heading }}</h5>
-                            <div class="text-start mb-4">
+                            <div class="text-start">
                                 @switch($item->rate)
                                     @case(1)
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
                                         @break
 
                                     @case(2)
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
                                         @break
 
                                     @case(3)
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
                                         @break
 
                                     @case(4)
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
                                         @break
 
                                     @case(5)
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
                                         @break
 
                                     @default
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
-                                        <i class="fa fa-star-o text-warning" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
+                                        <i class="fa fa-star-o text-warning fs-5" aria-hidden="true"></i>
                                 @endswitch
                             </div>
                             <img src="{{ asset('/uploads/'.$user->photo) }}" alt="" class="w-25 img-fluid rounded-circle">
                             <p class="card-text mt-3 fst-italic">" {{ $item->review_description }} "</p>
                             <h6 class="card-subtitle mb-2 text-muted">- {{ $user->name }}</h6>
+                            <p class="fs-6 fst-italic">{{ $item->created_at->format('d F Y h:i A') }}</p>
                         </div>
                     </div>
                 </div>
