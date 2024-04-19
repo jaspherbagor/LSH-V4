@@ -970,6 +970,8 @@ select {
 .testimonial .photo img {
 	width: 100%;
 	height: auto;
+	border-radius: 100px;
+	
 }
 .testimonial .text {
 	margin-top: 15px;
