@@ -32,7 +32,7 @@
                 <div class="col-lg-3">
                     <div class="form-group">
                         <select name="room_id" class="form-select">
-                            <option value="">Select Accommodation</option>
+                            <option value="">Select Room</option>
                             @foreach($room_all as $item)
                             @php
                             $accommodation = \App\Models\Accommodation::where('id', $item->accommodation_id)->first();
@@ -169,14 +169,6 @@
                 </div>
             </div>
             @endforeach
-            
-        <div class="row">
-            <div class="col-md-12">
-                <div class="big-button">
-                    <a href="{{ route('accommodation_types') }}" class="btn btn-primary">See Accommodation Types</a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 @endif
