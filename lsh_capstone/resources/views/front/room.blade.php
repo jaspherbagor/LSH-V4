@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <img src="{{ asset('uploads/'.$accommodation->photo) }}" alt="" class="w-100">
+            <img src="{{ asset('uploads/'.$accommodation->photo) }}" alt="" class="w-100 accommodation-image-detail">
         </div>
     </div>
     <div class="row">

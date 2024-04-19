@@ -1338,3 +1338,7 @@ select {
 .navbar-profile {
 	height: 30px
 }
+
+.accommodation-image-detail {
+	border-radius: 0px 20px 0px 20px;
+}
