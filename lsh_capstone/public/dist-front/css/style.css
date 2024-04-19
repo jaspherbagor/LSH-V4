@@ -977,7 +977,7 @@ select {
 	margin-top: 15px;
 }
 .testimonial .text h4 {
-	font-size: 22px;
+	font-size: 30px;
     font-weight: 700;
 	color: #fff;
 	margin-bottom: 8px;
@@ -985,6 +985,7 @@ select {
 .testimonial .text p {
 	font-size: 15px;
 	margin: 0;
+	color: #deb887;
 }
 .testimonial-carousel .owl-dots {
 	text-align: center;
@@ -1014,7 +1015,7 @@ select {
 	width: 40px;
 	height: 50px;
 	line-height: 48px;
-	background: #fff;
+	background: transparent;
 	color: #Deb887;
 	margin-top: -25px;
 	transition: all 0.3s;
