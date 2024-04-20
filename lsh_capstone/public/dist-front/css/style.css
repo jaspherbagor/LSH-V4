@@ -1327,6 +1327,10 @@ select {
 	backdrop-filter: blur(30px);
 }
 
+.login-container-fluid {
+	width: 350px!important
+}
+
 .form-input {
 	border-radius: 10px;
 	border: 2px solid rgb(27, 25, 25)

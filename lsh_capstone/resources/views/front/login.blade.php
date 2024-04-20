@@ -25,10 +25,10 @@
     <body class="login-body-container px-2  d-flex align-items-center justify-content-center">
 
         
-        <div class="page-content container-fluid login-container-fluid">
+        <div class="page-content container-fluid">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-4 py-4 px-4 login-container">
+                    <div class="col-md-4 py-4 px-4 login-container login-container-fluid">
                         <div class="text-center">
                             <a href="{{ route('home') }}">
                                 <img src="{{ asset('uploads/logo.png') }}" alt="" class="logo">
