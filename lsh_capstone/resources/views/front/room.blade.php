@@ -42,6 +42,7 @@
     </h2>
 </div>
 
+@if($room_count > 0)
 <div class="home-rooms">
     <div class="container">
         <div class="row">
@@ -85,12 +86,12 @@
                 @php 
                 $user = \App\Models\Customer::where('id', $item->customer_id)->first();
                 @endphp
+
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="card testimonial-card mb-4">
                         <div class="card-body">
-                            
                             <h5 class="card-title mb-3 fw-bold">{{ $item->review_heading }}</h5>
-                            <div class="text-start">
+                            <div class="text-start mb-3">
                                 @switch($item->rate)
                                     @case(1)
                                         <i class="fa fa-star text-warning fs-5" aria-hidden="true"></i>
@@ -148,9 +149,15 @@
                     </div>
                 </div>
                 @endforeach
-                
+
             </div>
         </div>
+
     </div>
 </div>
+@else 
+<div class="container">
+    <p class="text-danger text-center">No rooms were available as of now!</p>
+</div>
+@endif
 @endsection
