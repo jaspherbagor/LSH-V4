@@ -22,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     </head>
-    <body class="register-body-container px-2">
+    <body class="register-body-container px-2 d-flex align-items-center justify-content-center">
         <div class="page-content">
             <div class="container">
                 <div class="row justify-content-center">
