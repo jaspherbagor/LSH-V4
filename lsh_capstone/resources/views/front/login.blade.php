@@ -28,7 +28,7 @@
         <div class="page-content container-fluid">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-4 py-4 px-4 login-container login-container-fluid">
+                    <div class="col-md-4 py-4 px-4 login-container">
                         <div class="text-center">
                             <a href="{{ route('home') }}">
                                 <img src="{{ asset('uploads/logo.png') }}" alt="" class="logo">
