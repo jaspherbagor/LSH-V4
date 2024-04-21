@@ -138,7 +138,7 @@ class CustomerAuthController extends Controller
 
     public function forget_password()
     {
-        return view('front.forget_password');
+        return view('front.forget_password1');
     }
 
     public function forget_password_submit(Request $request)

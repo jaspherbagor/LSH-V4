@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <h2 class="text-center mb-4 mt-3">Forget Password</h2>     
-                        <form action="" method="post">
+                        <form action="{{ route('customer_forget_password_submit') }}" method="post">
                             @csrf
                             <div class="login-form">
                                 <div class="mb-3">
@@ -46,12 +46,12 @@
                                     @endif
                                 </div>
                                 <div class="mb-4 text-center">
-                                    <button type="submit" class="btn btn-primary bg-website">Login</button>
-                                    
+                                    <button type="submit" class="btn btn-primary bg-website">Submit</button>
+                                    <a href="{{ route('customer_login') }}" class="btn btn-secondary">Back to Login</a>
                                 </div>
-                                <div class="mt-2">
-                                    <a href="{{ route('customer_signin') }}" class="primary-color">Back to Login</a>
-                                </div>
+                                {{-- <div class="mt-2">
+                                    <a href="{{ route('customer_login') }}" class="primary-color">Back to Login</a>
+                                </div> --}}
                             </div>
                         </form>
         
