@@ -1311,7 +1311,7 @@ select {
 	height: 70px
 }
 
-.login-body-container {
+.login-body-container, .forget-password-body-container {
 	min-height: 100vh;
 	background-image: url('../../uploads/login.jpg');
 	background-repeat: no-repeat;
@@ -1327,7 +1327,7 @@ select {
 	background-position: center;
 }
 
-.login-container, .register-container {
+.login-container, .register-container, .forget-password-container {
 	border-radius: 10px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	border: 1px solid rgb(142, 134, 134);
