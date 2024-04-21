@@ -319,8 +319,8 @@
                             </p>
                             <form action="{{ route('subscriber_send_email') }}" method="post" class="form_subscribe_ajax">
                                 @csrf
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control">
+                                <div class="form-group" >
+                                    <input type="email" name="email" class="form-control newsletter">
                                     <span class="text-danger error-text email_error"></span>
                                 </div>
                                 <div class="form-group">
