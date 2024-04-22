@@ -12,16 +12,20 @@
         <div class="invoice-print">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="invoice-title">
-                        <h2>Invoice</h2>
-                        <div class="invoice-number">Order #{{ $order->order_no }}</div>
-                        <div class="d-flex align-items-center justify-content-end">
+                    <div class="invoice-title d-block">
+                        <h2 class="mb-3">Invoice</h2>
+                        <div class="invoice-number mt-md-0 mt-sm-0 mt-4">Order #{{ $order->order_no }}
+                        </div>
+
+                        <div class="container d-flex align-items-center justify-content-end me-4">
                             <div>
                                 <svg class="barcode"
                                 jsbarcode-format="auto"
                                 jsbarcode-value="{{ $order->order_no }}"
-                                jsbarcode-textmargin="0"
-                                jsbarcode-fontoptions="bold">
+                                jsbarcode-textmargin="1"
+                                jsbarcode-height="50"
+                                jsbarcode-width="2"
+                                jsbarcode-fontoptions="italic">
                                 </svg>
                             </div>
                         </div>
