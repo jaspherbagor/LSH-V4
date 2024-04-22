@@ -15,6 +15,16 @@
                     <div class="invoice-title">
                         <h2>Invoice</h2>
                         <div class="invoice-number">Order #{{ $order->order_no }}</div>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div>
+                                <svg class="barcode"
+                                jsbarcode-format="auto"
+                                jsbarcode-value="{{ $order->order_no }}"
+                                jsbarcode-textmargin="0"
+                                jsbarcode-fontoptions="bold">
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <hr>
                     <div class="row">
@@ -129,6 +139,7 @@
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
 </script>
+<script src="{{ asset('dist\js\JsBarcode.all.min.js') }}"></script>
 <script>
     var qrcode = new QRCode("qrcode", {
         text: "{{ $order->order_no }}",
@@ -138,5 +149,7 @@
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
+
+    JsBarcode(".barcode").init();
 </script>
 @endsection
