@@ -57,9 +57,9 @@
                             <h2><a href="{{ route('room_detail',$item->id) }}">{{ $item->room_name }}</a></h2>
                             <div class="price">
                                 @if($accommodation_type->name !== 'Hotel')
-                                ₱{{ $item->price }}/month
+                                ₱{{ number_format($item->price, 2) }}/month
                                 @else
-                                ₱{{ $item->price }}/night
+                                ₱{{ number_format($item->price, 2) }}/night
                                 @endif
     
                             </div>
