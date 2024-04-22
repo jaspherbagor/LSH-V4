@@ -30,7 +30,7 @@ class CustomerAuthController extends Controller
             return redirect()->route('customer_home');
         } elseif (Auth::guard('admin')->check()) {
             Auth::guard('admin')->logout();
-            return redirect()->route('admin_logout');
+            return redirect()->route('customer_login');
         }
 
 

@@ -18,7 +18,7 @@ class AdminLoginController extends Controller
             return redirect()->route('admin_home');
         } elseif (Auth::guard('customer')->check()) {
             Auth::guard('customer')->logout();
-            return redirect()->route('customer_logout');
+            return redirect()->route('admin_login');
         }
         
         return view('admin.login');
