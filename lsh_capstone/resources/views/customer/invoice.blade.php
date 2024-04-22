@@ -18,6 +18,7 @@
                     </div>
                     <hr>
                     <div class="row">
+                        
                         <div class="col-md-4">
                             <address>
                                 <strong>Invoice To</strong><br>
@@ -42,6 +43,9 @@
                                 <strong>Invoice Date</strong><br>
                                 {{ \Carbon\Carbon::createFromFormat('d/m/Y', $order->booking_date)->format('F d, Y') }}
                             </address>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="qrcode"></div>
                         </div>
                     </div>
                 </div>
@@ -122,4 +126,17 @@
         </div>
     </div>
 </div>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+</script>
+<script>
+    var qrcode = new QRCode("qrcode", {
+        text: "{{ $order->order_no }}",
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
 @endsection
