@@ -41,28 +41,21 @@
                             <input type="hidden" name="email" value="{{ $email }}">
                             <div class="login-form">
                                 <div class="mb-3">
-                                    <label for="" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control form-input" name="email">
-                                    @if($errors->has('email'))
-                                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                                    @endif
-                                </div>
-                                <div class="mb-3">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control form-input" name="password">
+                                    <input type="password" class="form-control" name="password">
                                     @if($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
-                                <div class="mb-4 text-center">
-                                    <button type="submit" class="btn btn-primary bg-website">Login</button>
-                                    
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Retype Password</label>
+                                    <input type="password" class="form-control" name="retype_password">
+                                    @if($errors->has('retype_password'))
+                                        <span class="text-danger">{{ $errors->first('retype_password') }}</span>
+                                    @endif
                                 </div>
-                                <div class="mt-2">
-                                    <a href="{{ route('customer_forget_password') }}" class="primary-color">Forget password.</a>
-                                    <br>
-                                    Don't have an account yet?
-                                    <a href="{{ route('customer_signup') }}" class="primary-color">Register instead.</a>
+                                <div class="mb-3">
+                                    <button type="submit" class="btn btn-primary bg-website">Update</button>
                                 </div>
                             </div>
                         </form>
