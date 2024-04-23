@@ -189,7 +189,7 @@ class CustomerAuthController extends Controller
             return redirect()->route('customer_login');
         }
 
-        return view('front.reset_password1', compact('token','email'));
+        return view('front.reset_password', compact('token','email'));
 
     }
 
