@@ -48,12 +48,21 @@ class BookingController extends Controller
             $arr = Room::where('id',$request->room_id)->first();
             $total_allowed_rooms = $arr->total_rooms;
 
+            if($request->has('children')) {
+                $cart_total_guest =  $request->adult + $request->children;
+            }
+
+            $cart_total_guest =  $request->adult;
+
+            $room_total_guest = $arr->total_guests;
+
             if($total_already_booked_rooms == $total_allowed_rooms) {
                 $count = 0;
                 break;
             }
             $t1 = strtotime('+1 day',$t1);
         }
+
 
         if($count == 0) {
             return redirect()->back()->with('error', 'Maximum number of this room is already booked');
