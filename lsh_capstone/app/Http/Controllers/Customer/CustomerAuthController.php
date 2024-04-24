@@ -12,18 +12,6 @@ use App\Models\Customer;
 
 class CustomerAuthController extends Controller
 {
-    // public function index()
-    // {
-    //     if (Auth::guard('customer')->check()) {
-    //         return redirect()->route('customer_home');
-    //     } elseif (Auth::guard('admin')->check()) {
-    //         Auth::guard('admin')->logout();
-    //         return redirect()->route('admin_logout');
-    //     }
-
-    //     return view('front.login');
-    // }
-
     public function login()
     {
         if (Auth::guard('customer')->check()) {
