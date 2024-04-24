@@ -48,13 +48,13 @@ class BookingController extends Controller
             $arr = Room::where('id',$request->room_id)->first();
             $total_allowed_rooms = $arr->total_rooms;
 
-            if($request->has('children')) {
-                $cart_total_guest =  $request->adult + $request->children;
-            }
-
             $cart_total_guest =  $request->adult;
 
             $room_total_guest = $arr->total_guests;
+
+            if($cart_total_guest > $room_total_guest) {
+                return redirect()->back()->with('error', 'There were only '.$room_total_guest.' guests allowed to book in this room!');
+            }
 
             if($total_already_booked_rooms == $total_allowed_rooms) {
                 $count = 0;
