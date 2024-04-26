@@ -38,28 +38,28 @@
                             <div class="login-form">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control form-input" name="name">
+                                    <input type="text" class="form-control form-input @if($errors->has('name')) is-invalid @endif" name="name">
                                     @if($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control form-input" name="email">
+                                    <input type="text" class="form-control form-input @if($errors->has('email')) is-invalid @endif" name="email">
                                     @if($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control form-input" name="password">
+                                    <input type="password" class="form-control form-input @if($errors->has('password')) is-invalid @endif" name="password">
                                     @if($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control form-input" name="confirm_password">
+                                    <input type="password" class="form-control form-input @if($errors->has('confirm_password')) is-invalid @endif" name="confirm_password">
                                     @if($errors->has('confirm_password'))
                                         <span class="text-danger">{{ $errors->first('confirm_password') }}</span>
                                     @endif
