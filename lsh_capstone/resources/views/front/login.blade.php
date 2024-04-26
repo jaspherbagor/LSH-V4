@@ -40,14 +40,14 @@
                             <div class="login-form">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control form-input" name="email">
+                                    <input type="text" class="form-control form-input @if($errors->has('email')) is-invalid @endif" name="email">
                                     @if($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control form-input" name="password">
+                                    <input type="password" class="form-control form-input @if($errors->has('password')) is-invalid @endif" name="password">
                                     @if($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
