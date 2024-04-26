@@ -1358,3 +1358,8 @@ select {
 .accommodation-image-detail {
 	border-radius: 0px 20px 0px 20px;
 }
+
+.form-control.is-invalid, .was-validated .form-control:invalid
+{
+	border-color: #dc3545 !important;
+}
