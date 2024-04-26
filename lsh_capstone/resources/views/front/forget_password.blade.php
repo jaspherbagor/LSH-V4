@@ -49,9 +49,6 @@
                                     <button type="submit" class="btn btn-primary bg-website">Submit</button>
                                     <a href="{{ route('customer_login') }}" class="btn btn-secondary">Back to Login</a>
                                 </div>
-                                {{-- <div class="mt-2">
-                                    <a href="{{ route('customer_login') }}" class="primary-color">Back to Login</a>
-                                </div> --}}
                             </div>
                         </form>
         
