@@ -42,14 +42,14 @@
                             <div class="login-form">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Password</label>
-                                    <input type="password" class="form-control form-input" name="password">
+                                    <input type="password" class="form-control form-input @if($errors->has('password')) is-invalid @endif" name="password">
                                     @if($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
                                     @endif
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Retype Password</label>
-                                    <input type="password" class="form-control form-input" name="retype_password">
+                                    <input type="password" class="form-control form-input @if($errors->has('retype_password')) is-invalid @endif" name="retype_password">
                                     @if($errors->has('retype_password'))
                                         <span class="text-danger">{{ $errors->first('retype_password') }}</span>
                                     @endif
