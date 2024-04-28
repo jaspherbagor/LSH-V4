@@ -14,7 +14,6 @@ class SubscriberController extends Controller
 {
     public function send_email(Request $request)
     {
-        // dd($request->name);
         $validator = Validator::make($request->all(),[
             'email' => 'required|email'
         ]);
@@ -53,14 +52,12 @@ class SubscriberController extends Controller
         $subscriber_data = Subscriber::where('email', $email)->where('token', $token)->first();
 
         if($subscriber_data) {
-            //echo 'Your data has been found? Weeee Di Nga!';
             $subscriber_data->token = '';
             $subscriber_data->status = 1;
             $subscriber_data->update();
 
             return redirect()->route('home')->with('success', 'Your subscription is verified successfully!');
         } else {
-            //echo 'Your data is not found! Period.';
             return redirect()->route('home')->with('error', 'Your data is not found!');
         }
     }
