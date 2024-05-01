@@ -16,8 +16,7 @@ class CustomerReviewController extends Controller
     public function index()
     {
         // Retrieve all rates (reviews) submitted by the authenticated customer
-        $rates = AccommodationRate::where('customer_id', Auth::guard('customer')->user()->id)
-                                  ->get();
+        $rates = AccommodationRate::where('customer_id', Auth::guard('customer')->user()->id)->get();
 
         // Render the 'customer.review_view' view and pass the list of rates to it
         return view('customer.review_view', compact('rates'));
