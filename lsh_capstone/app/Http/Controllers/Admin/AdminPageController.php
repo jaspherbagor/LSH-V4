@@ -81,14 +81,6 @@ class AdminPageController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
     public function contact()
     {
         $contact_data = Page::where('id',1)->first();
