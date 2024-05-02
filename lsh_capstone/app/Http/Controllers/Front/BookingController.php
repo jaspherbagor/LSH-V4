@@ -104,11 +104,12 @@ class BookingController extends Controller
         return redirect()->back()->with('success', 'Room is added to the cart successfully.');
     }
 
-
     public function cart_view()
     {
+        // Return the 'front.cart' view for displaying the cart contents
         return view('front.cart');
     }
+    
 
     public function cart_delete($id)
     {
