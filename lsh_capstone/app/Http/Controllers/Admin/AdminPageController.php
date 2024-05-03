@@ -65,39 +65,60 @@ class AdminPageController extends Controller
     }
 
 
+    // Handles the display of the "Privacy" page in the admin area
     public function privacy()
     {
-        $privacy_data = Page::where('id',1)->first();
+        // Retrieve the "Privacy" page data from the database where the page ID is 1
+        $privacy_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Privacy" page with the retrieved data
         return view('admin.privacy_page', compact('privacy_data'));
     }
 
+    // Handles updating the "Privacy" page in the admin area
     public function privacy_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Privacy" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "Privacy" page data with values from the request
         $obj->privacy_heading = $request->privacy_heading;
         $obj->privacy_content = $request->privacy_content;
         $obj->privacy_status = $request->privacy_status;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Privacy page is updated successfully!');
     }
 
+    // Handles the display of the "Room" page in the admin area
     public function room()
     {
-        $room_data = Page::where('id',1)->first();
+        // Retrieve the "Room" page data from the database where the page ID is 1
+        $room_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Room" page with the retrieved data
         return view('admin.room_page', compact('room_data'));
     }
 
+    // Handles updating the "Room" page in the admin area
     public function room_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Room" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
+
+        // Update the "Room" page data with values from the request
         $obj->room_heading = $request->room_heading;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Data is updated successfully.');
     }
+
 
 
     public function contact()
