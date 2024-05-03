@@ -119,42 +119,58 @@ class AdminPageController extends Controller
         return redirect()->back()->with('success', 'Data is updated successfully.');
     }
 
-
-
+    // Handles the display of the "Contact" page in the admin area
     public function contact()
     {
-        $contact_data = Page::where('id',1)->first();
+        // Retrieve the "Contact" page data from the database where the page ID is 1
+        $contact_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Contact" page with the retrieved data
         return view('admin.contact_page', compact('contact_data'));
     }
 
+    // Handles updating the "Contact" page in the admin area
     public function contact_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Contact" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "Contact" page data with values from the request
         $obj->contact_heading = $request->contact_heading;
         $obj->contact_map = $request->contact_map;
         $obj->contact_status = $request->contact_status;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Contact page is updated successfully!');
     }
 
+    // Handles the display of the "Photo Gallery" page in the admin area
     public function photo_gallery()
     {
-        $photo_gallery_data = Page::where('id',1)->first();
+        // Retrieve the "Photo Gallery" page data from the database where the page ID is 1
+        $photo_gallery_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Photo Gallery" page with the retrieved data
         return view('admin.photo_gallery_page', compact('photo_gallery_data'));
     }
 
+    // Handles updating the "Photo Gallery" page in the admin area
     public function photo_gallery_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Photo Gallery" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "Photo Gallery" page data with values from the request
         $obj->photo_gallery_heading = $request->photo_gallery_heading;
         $obj->photo_gallery_status = $request->photo_gallery_status;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Photo gallery page is updated successfully!');
     }
 
