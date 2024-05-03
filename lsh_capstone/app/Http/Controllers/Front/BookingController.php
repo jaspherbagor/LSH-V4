@@ -113,80 +113,107 @@ class BookingController extends Controller
 
     public function cart_delete($id)
     {
+        // Initialize an empty array to hold cart room IDs
         $arr_cart_room_id = array();
-        $i=0;
-        foreach(session()->get('cart_room_id') as $value) {
+        $i = 0;
+
+        // Iterate through the cart room IDs in the session
+        // and populate the array with them
+        foreach (session()->get('cart_room_id') as $value) {
             $arr_cart_room_id[$i] = $value;
             $i++;
         }
 
+        // Initialize an empty array to hold cart check-in dates
         $arr_cart_checkin_date = array();
-        $i=0;
-        foreach(session()->get('cart_checkin_date') as $value) {
+        $i = 0;
+
+        // Iterate through the cart check-in dates in the session
+        // and populate the array with them
+        foreach (session()->get('cart_checkin_date') as $value) {
             $arr_cart_checkin_date[$i] = $value;
             $i++;
         }
 
+        // Initialize an empty array to hold cart checkout dates
         $arr_cart_checkout_date = array();
-        $i=0;
-        foreach(session()->get('cart_checkout_date') as $value) {
+        $i = 0;
+
+        // Iterate through the cart checkout dates in the session
+        // and populate the array with them
+        foreach (session()->get('cart_checkout_date') as $value) {
             $arr_cart_checkout_date[$i] = $value;
             $i++;
         }
 
+        // Initialize an empty array to hold cart adult counts
         $arr_cart_adult = array();
-        $i=0;
-        foreach(session()->get('cart_adult') as $value) {
+        $i = 0;
+
+        // Iterate through the cart adult counts in the session
+        // and populate the array with them
+        foreach (session()->get('cart_adult') as $value) {
             $arr_cart_adult[$i] = $value;
             $i++;
         }
 
+        // Initialize an empty array to hold cart children counts
         $arr_cart_children = array();
-        $i=0;
-        foreach(session()->get('cart_children') as $value) {
+        $i = 0;
+
+        // Iterate through the cart children counts in the session
+        // and populate the array with them
+        foreach (session()->get('cart_children') as $value) {
             $arr_cart_children[$i] = $value;
             $i++;
         }
 
+        // Clear all cart session data
         session()->forget('cart_room_id');
         session()->forget('cart_checkin_date');
         session()->forget('cart_checkout_date');
         session()->forget('cart_adult');
         session()->forget('cart_children');
 
-        for($i=0;$i<count($arr_cart_room_id);$i++)
-        {
-            if($arr_cart_room_id[$i] == $id) 
-            {
-                continue;    
-            }
-            else
-            {
-                session()->push('cart_room_id',$arr_cart_room_id[$i]);
-                session()->push('cart_checkin_date',$arr_cart_checkin_date[$i]);
-                session()->push('cart_checkout_date',$arr_cart_checkout_date[$i]);
-                session()->push('cart_adult',$arr_cart_adult[$i]);
-                session()->push('cart_children',$arr_cart_children[$i]);
+        // Loop through the cart room IDs array
+        // to rebuild the cart session data
+        for ($i = 0; $i < count($arr_cart_room_id); $i++) {
+            // Check if the current room ID matches the ID to delete
+            if ($arr_cart_room_id[$i] == $id) {
+                // Skip the current iteration if the IDs match
+                continue;
+            } else {
+                // Re-add the remaining cart data back into the session
+                session()->push('cart_room_id', $arr_cart_room_id[$i]);
+                session()->push('cart_checkin_date', $arr_cart_checkin_date[$i]);
+                session()->push('cart_checkout_date', $arr_cart_checkout_date[$i]);
+                session()->push('cart_adult', $arr_cart_adult[$i]);
+                session()->push('cart_children', $arr_cart_children[$i]);
             }
         }
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Cart item is deleted.');
-
     }
-
 
     public function checkout()
     {
-        if(!Auth::guard('customer')->check()) {
-            return redirect()->back()->with('error', 'You must have to login in order to book');
+        // Check if the customer is logged in
+        if (!Auth::guard('customer')->check()) {
+            // Redirect back with an error message if not logged in
+            return redirect()->back()->with('error', 'You must be logged in to book');
         }
 
-        if(!session()->has('cart_room_id')) {
-            return redirect()->back()->with('error', 'No accommodation units added to booking cart');
+        // Check if there are items in the booking cart
+        if (!session()->has('cart_room_id')) {
+            // Redirect back with an error message if the cart is empty
+            return redirect()->back()->with('error', 'No accommodation units added to the booking cart');
         }
 
+        // Render the checkout view
         return view('front.checkout');
     }
+
 
     public function payment(Request $request)
     {
