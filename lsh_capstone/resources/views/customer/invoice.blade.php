@@ -14,7 +14,7 @@
                 <div class="col-lg-12">
                     <div class="invoice-title d-block">
                         <h2 class="mb-3">Invoice</h2>
-                        <div class="invoice-number mt-md-0 mt-sm-0 mt-4">Order No. <span class="c1">{{ $order->order_no }}</span>
+                        <div class="invoice-number mt-md-0 mt-sm-0 mt-4">Booking No. <span class="c1">{{ $order->order_no }}</span>
                         </div>
 
                         <div class="container d-flex align-items-center justify-content-end me-4">
