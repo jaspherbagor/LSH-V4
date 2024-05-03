@@ -175,41 +175,60 @@ class AdminPageController extends Controller
     }
 
 
+    // Handles the display of the "Video Gallery" page in the admin area
     public function video_gallery()
     {
-        $video_gallery_data = Page::where('id',1)->first();
+        // Retrieve the "Video Gallery" page data from the database where the page ID is 1
+        $video_gallery_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Video Gallery" page with the retrieved data
         return view('admin.video_gallery_page', compact('video_gallery_data'));
     }
 
+    // Handles updating the "Video Gallery" page in the admin area
     public function video_gallery_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Video Gallery" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "Video Gallery" page data with values from the request
         $obj->video_gallery_heading = $request->video_gallery_heading;
         $obj->video_gallery_status = $request->video_gallery_status;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Video gallery page is updated successfully!');
     }
 
+    // Handles the display of the "FAQ" page in the admin area
     public function faq()
     {
-        $faq_data = Page::where('id',1)->first();
+        // Retrieve the "FAQ" page data from the database where the page ID is 1
+        $faq_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "FAQ" page with the retrieved data
         return view('admin.faq_page', compact('faq_data'));
     }
 
+    // Handles updating the "FAQ" page in the admin area
     public function faq_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "FAQ" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "FAQ" page data with values from the request
         $obj->faq_heading = $request->faq_heading;
         $obj->faq_status = $request->faq_status;
+
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'FAQ page is updated successfully!');
     }
+
 
 
     public function blog()
