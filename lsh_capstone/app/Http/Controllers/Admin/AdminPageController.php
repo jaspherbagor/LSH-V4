@@ -8,43 +8,62 @@ use Illuminate\Http\Request;
 
 class AdminPageController extends Controller
 {
+    // Handles the display of the "About" page in the admin area
     public function about()
     {
-        $about_data = Page::where('id',1)->first();
+        // Retrieve the "About" page data from the database where the page ID is 1
+        $about_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "About" page with the retrieved data
         return view('admin.about_page', compact('about_data'));
     }
 
+    // Handles updating the "About" page in the admin area
     public function about_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "About" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "About" page data with values from the request
         $obj->about_heading = $request->about_heading;
         $obj->about_content = $request->about_content;
         $obj->about_status = $request->about_status;
+        
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'About page is updated successfully!');
     }
 
+    // Handles the display of the "Terms" page in the admin area
     public function terms()
     {
-        $terms_data = Page::where('id',1)->first();
+        // Retrieve the "Terms" page data from the database where the page ID is 1
+        $terms_data = Page::where('id', 1)->first();
+        
+        // Return the view for the admin "Terms" page with the retrieved data
         return view('admin.terms_page', compact('terms_data'));
     }
 
+    // Handles updating the "Terms" page in the admin area
     public function terms_update(Request $request)
     {
-        $obj = Page::where('id',1)->first();
+        // Retrieve the "Terms" page data from the database where the page ID is 1
+        $obj = Page::where('id', 1)->first();
 
-
+        // Update the "Terms" page data with values from the request
         $obj->terms_heading = $request->terms_heading;
         $obj->terms_content = $request->terms_content;
         $obj->terms_status = $request->terms_status;
+        
+        // Save the updated data back to the database
         $obj->update();
 
+        // Redirect back with a success message
         return redirect()->back()->with('success', 'Terms page is updated successfully!');
     }
+
 
     public function privacy()
     {
