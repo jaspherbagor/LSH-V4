@@ -12,6 +12,7 @@
         <ul class="sidebar-menu">
 
             <li class="{{ Request::is('admin/home') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_home') }}"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
+            <li><a class="nav-link" href="{{ route('home') }}"><i class="fa fa-eye"></i> <span>View Website</span></a></li>
             <li class="{{ Request::is('admin/edit-profile') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_profile') }}"><i class="fa fa-user-plus"></i> <span>Edit Profile</span></a></li>
             <li class="{{ Request::is('admin/setting') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_setting') }}"><i class="fa  fa-cogs"></i> <span>Setting</span></a></li>
 
