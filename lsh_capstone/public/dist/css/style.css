@@ -599,7 +599,7 @@ select.form-control:not([size]):not([multiple]) {
 
 /* 3.5 Card */
 .card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
   border-radius: 3px;
   border: none;
