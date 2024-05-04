@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-lg-3">
                     <div class="form-group">
-                        <input type="text" name="checkin_checkout" class="form-control daterange1" placeholder="Checkin & Checkout">
+                        <input type="text" name="checkin_checkout" class="form-control daterange1" placeholder="Arrival & Departure">
                     </div>
                 </div>
                 <div class="col-lg-2">
