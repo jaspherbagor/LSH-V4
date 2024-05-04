@@ -12,7 +12,7 @@
         <ul class="sidebar-menu">
 
             <li class="{{ Request::is('admin/home') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_home') }}"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-            <li class="{{ Request::is('admin/edit-profile') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_profile') }}"><i class="fa fa-user-circle-o"></i> <span>Edit Profile</span></a></li>
+            <li class="{{ Request::is('admin/edit-profile') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_profile') }}"><i class="fa fa-user-plus"></i> <span>Edit Profile</span></a></li>
             <li class="{{ Request::is('admin/setting') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_setting') }}"><i class="fa  fa-cogs"></i> <span>Setting</span></a></li>
 
             <li class="{{ Request::is('admin/datewise-rooms') ? 'active' : '' }}"><a class="nav-link" href="{{ route('admin_datewise_rooms') }}"><i class="fa fa-calendar"></i> <span>Datewise Rooms</span></a></li>
