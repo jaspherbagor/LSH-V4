@@ -82,7 +82,7 @@
                     <h4>Total Accommodations</h4>
                 </div>
                 <div class="card-body">
-                    {{ $total_rooms }}
+                    {{ $total_accommodations }}
                 </div>
             </div>
         </div>

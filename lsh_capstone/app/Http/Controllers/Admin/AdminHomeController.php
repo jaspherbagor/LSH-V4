@@ -39,6 +39,6 @@ class AdminHomeController extends Controller
         $recent_orders = Order::orderBy('id', 'desc')->skip(0)->take(5)->get();
 
         // Return the 'admin.home' view with all the calculated data
-        return view('admin.home', compact('total_completed_orders', 'total_pending_orders', 'total_active_customers', 'total_pending_customers', 'total_rooms', 'total_subscribers', 'recent_orders'));
+        return view('admin.home', compact('total_completed_orders', 'total_pending_orders', 'total_active_customers', 'total_pending_customers', 'total_accommodations', 'total_subscribers', 'recent_orders'));
     }
 }
