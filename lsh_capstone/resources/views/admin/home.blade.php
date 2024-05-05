@@ -22,19 +22,21 @@
         </a>
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-website">
-                <i class="fa fa-shopping-cart"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Pending Bookings</h4>
+        <a href="{{ route('admin_order_view') }}">
+            <div class="card card-statistic-1">
+                <div class="card-icon bg-website">
+                    <i class="fa fa-shopping-cart"></i>
                 </div>
-                <div class="card-body">
-                    {{ $total_pending_orders }}
+                <div class="card-wrap">
+                    <div class="card-header">
+                        <h4>Pending Bookings</h4>
+                    </div>
+                    <div class="card-body">
+                        {{ $total_pending_orders }}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>  
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
