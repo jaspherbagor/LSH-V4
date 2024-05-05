@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;  // Base controller class
 use App\Models\Customer;  // Model for customers
 use App\Models\Order;  // Model for orders
-use App\Models\Room;  // Model for rooms
+use App\Models\Accommodation;  // Model for accommodations
 use App\Models\Subscriber;  // Model for subscribers
 use Illuminate\Http\Request;  // Request handling class
 
@@ -30,7 +30,7 @@ class AdminHomeController extends Controller
         $total_pending_customers = Customer::where('status', 0)->count();
 
         // Count the total rooms
-        $total_rooms = Room::count();
+        $total_accommodations = Accommodation::count();
 
         // Count the total active subscribers
         $total_subscribers = Subscriber::where('status', 1)->count();

@@ -39,34 +39,38 @@
         </a>  
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-website">
-                <i class="fa fa-user-plus"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Active Customers</h4>
+        <a href="{{ route('admin_customer') }}">
+            <div class="card card-statistic-1">
+                <div class="card-icon bg-website">
+                    <i class="fa fa-user-plus"></i>
                 </div>
-                <div class="card-body">
-                    {{ $total_active_customers }}
+                <div class="card-wrap">
+                    <div class="card-header">
+                        <h4>Active Customers</h4>
+                    </div>
+                    <div class="card-body">
+                        {{ $total_active_customers }}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>     
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-website">
-                <i class="fa fa-user"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>Pending Customers</h4>
+        <a href="{{ route('admin_customer') }}">
+            <div class="card card-statistic-1">
+                <div class="card-icon bg-website">
+                    <i class="fa fa-user"></i>
                 </div>
-                <div class="card-body">
-                    {{ $total_pending_customers }}
+                <div class="card-wrap">
+                    <div class="card-header">
+                        <h4>Pending Customers</h4>
+                    </div>
+                    <div class="card-body">
+                        {{ $total_pending_customers }}
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>   
     </div>
     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card card-statistic-1">
@@ -75,7 +79,7 @@
             </div>
             <div class="card-wrap">
                 <div class="card-header">
-                    <h4>Total Rooms</h4>
+                    <h4>Total Accommodations</h4>
                 </div>
                 <div class="card-body">
                     {{ $total_rooms }}
