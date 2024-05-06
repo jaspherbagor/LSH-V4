@@ -112,7 +112,7 @@
                                 <a href="{{ route('accommodation_detail',$item->id) }}">{{ $item->name }}</a>
                             </h2>
                             <div class="button">
-                                <a href="{{ route('accommodation_detail',$item->id) }}" class="btn btn-primary">See Accommodations</a>
+                                <a href="{{ route('accommodation_detail',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View Accommodations</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                 @endif
                             </div>
                             <div class="button">
-                                <a href="{{ route('room_detail',$item->id) }}" class="btn btn-primary">See Detail</a>
+                                <a href="{{ route('room_detail',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View Detail</a>
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                                 </p>
                             </div>
                             <div class="button">
-                                <a href="{{ route('single_post',$item->id) }}" class="btn btn-primary">Read More</a>
+                                <a href="{{ route('single_post',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> Read More</a>
                             </div>
                         </div>
                     </div>
