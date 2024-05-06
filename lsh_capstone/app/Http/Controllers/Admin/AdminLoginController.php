@@ -166,7 +166,11 @@ class AdminLoginController extends Controller
         
         // Validate the request data (password and confirm_password are required and must match)
         $request->validate([
-            'password' => 'required',
+            'password' => [
+                'required',
+                'min:8',
+                'regex:/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])/',
+            ],
             'confirm_password' => 'required|same:password'
         ]);
 
