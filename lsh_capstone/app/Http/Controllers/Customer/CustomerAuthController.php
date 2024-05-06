@@ -85,7 +85,11 @@ class CustomerAuthController extends Controller
         $request->validate([
             'name' => 'required', // Name is required
             'email' => 'required|email|unique:customers', // Email is required, must be valid, and must be unique among customers
-            'password' => 'required', // Password is required
+            'password' => [
+                'required',
+                'min:8',
+                'regex:/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])/',
+            ], // Password is required
             'confirm_password' => 'required|same:password' // Confirmed password must match the original password
         ]);
 
