@@ -246,7 +246,11 @@ class CustomerAuthController extends Controller
 
         // Validate the request data for password and confirmed password
         $request->validate([
-            'password' => 'required', // Password is required
+            'password' => [
+                'required',
+                'min:8',
+                'regex:/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[^a-zA-Z0-9])/',
+            ], // Password is required
             'retype_password' => 'required|same:password' // Confirmed password must match the original password
         ]);
 
