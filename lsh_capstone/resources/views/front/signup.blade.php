@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Email Address</label>
-                                    <input type="text" class="form-control form-input @if($errors->has('email')) is-invalid @endif" name="email">
+                                    <input type="text" class="form-control form-input @if($errors->has('email')) is-invalid @endif" name="email" value="{{ old('email') }}">
                                     @if($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
