@@ -38,7 +38,7 @@
                             <div class="login-form">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control form-input @if($errors->has('name')) is-invalid @endif" name="name">
+                                    <input type="text" class="form-control form-input @if($errors->has('name')) is-invalid @endif" name="name" value="{{ old('name') }}">
                                     @if($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
