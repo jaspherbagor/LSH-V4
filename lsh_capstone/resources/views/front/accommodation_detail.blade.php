@@ -25,7 +25,7 @@
                         <div class="text card-body">
                             <h2><a href="{{ route('room',$item->id) }}">{{ $item->name }}</a></h2>
                             <div class="button">
-                                <a href="{{ route('room',$item->id) }}" class="btn btn-primary">See Detail</a>
+                                <a href="{{ route('room',$item->id) }}" class="btn btn-primary"><i class="fa fa-eye" aria-hidden="true"></i> View Detail</a>
                             </div>
                         </div>
                     </div>
