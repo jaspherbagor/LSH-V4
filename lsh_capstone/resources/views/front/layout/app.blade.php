@@ -81,23 +81,6 @@
             .home-rooms .inner .text .button a, .blog-item .inner .text .button a {
                 background: {{ $global_setting_data->theme_color_1 }};
             }
-
-            .home-rooms .inner .text .button a, .blog-item .inner .text .button a {
-                color: white;
-            }
-
-            .home-rooms .inner .text .button a:hover, .blog-item .inner .text .button a:hover {
-                background: #e1ab65; 
-            }
-
-            .home-rooms .inner .text .button a, .blog-item .inner .text a {
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-            }
-
-            .home-rooms .inner .text .button a:hover, .blog-item .inner .text .button a:hover{
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-            }
-
         </style>
 
     </head>
