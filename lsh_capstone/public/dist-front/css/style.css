@@ -668,6 +668,10 @@ select {
 	color: #000;
 }
 
+.footer ul.useful-links li a:hover {
+	/* color: #343a40; */
+	color: #deb887;
+}
 .newsletter {
 	border-color: #deb887;
 	border-radius: 5px;
