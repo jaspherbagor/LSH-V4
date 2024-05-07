@@ -74,7 +74,7 @@
         <div class="row">
             
             @foreach($feature_all as $item)
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="inner">
                     <div class="icon"><i class="{{ $item->icon }}"></i></div>
                     <div class="text">
