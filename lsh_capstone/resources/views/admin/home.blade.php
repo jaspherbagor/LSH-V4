@@ -148,7 +148,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Boarding Houses</h4>
+                        <h4>Total Boarding Houses</h4>
                     </div>
                     <div class="card-body">
                         2
