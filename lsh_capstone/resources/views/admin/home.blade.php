@@ -80,7 +80,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Accommodations</h4>
+                        <h4>Total Accommodations</h4>
                     </div>
                     <div class="card-body">
                         {{ $total_accommodations }}
