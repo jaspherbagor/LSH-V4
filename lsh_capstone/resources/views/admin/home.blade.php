@@ -114,7 +114,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Apartments</h4>
+                        <h4>Total Apartments</h4>
                     </div>
                     <div class="card-body">
                         3
